@@ -1,0 +1,25 @@
+@import 'reset-css';
+@import "bootstrap/scss/bootstrap";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+#recordContent {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    min-height: 100px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

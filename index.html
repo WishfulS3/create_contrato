@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh" class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排版打印</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full">
+    <div class="min-h-full p-4">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="px-4 py-5 sm:px-6 flex justify-between items-center border-b border-gray-200">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">排版打印 (Word 版)</h3>
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+                        </svg>
+                    </button>
+                    <button class="text-gray-400 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <button class="text-gray-400 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="px-4 py-5 sm:p-6">
+                <h4 class="text-xl font-semibold text-gray-900 mb-4">排版打印-WORD版</h4>
+                <p class="text-sm text-gray-600 mb-6">将你的 docx 文档作为模板，插入多维表格字段等量，快速生成可用文档模板。</p>
+
+                <div class="space-y-6">
+                    <div>
+                        <h5 class="text-lg font-medium text-gray-900 mb-2">1 准备 docx 文档模版</h5>
+                        <p class="text-sm text-gray-600 mb-2">按需制作Word模版文件，也可使用现成的文件，支持 docx 格式</p>
+                        <p class="text-sm text-gray-600 mb-4">在文件中插入占位符，格式为 {{字段名}}，用于告诉排版打印显示真实数据的准确位置。</p>
+                        <p class="text-sm text-gray-600 mb-4">注意：多维表格中必须包含一个名为"file"的字段，且该字段类型必须是附件。生成的文件将保存到这个字段中。</p>
+                        <div class="flex space-x-4">
+
+
+                            
+                            <a href="https://regardsgroup.feishu.cn/docx/Xr9odOHF0oieQwxHmcwcnLb6n4e?from=from_copylink" class="text-blue-600 hover:text-blue-800">插件使用方法</a>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="text-lg font-medium text-gray-900 mb-2">2 上传Word模版文件（docx）</h5>
+                        <div class="mb-3">
+                            <label for="templateFile" class="block text-sm font-medium text-gray-700 mb-2">选择模板文件</label>
+                            <input type="file" class="form-control block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" id="templateFile" accept=".docx">
+                        </div>
+                        <div class="mb-3">
+                            <button id="uploadTemplate" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                上传模板
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-medium text-gray-900 mb-2">3 点击并选中记录内容</h5>
+                        <p class="text-sm text-gray-600 mb-4">请从表格中点击并选中一条记录用于生成合同，确保正确选择需要的数据内容。</p>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-medium text-gray-900 mb-2">4 生成合同</h5>
+                        <button id="generateContract" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            生成合同
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/index.ts"></script>
+</body>
+</html>
